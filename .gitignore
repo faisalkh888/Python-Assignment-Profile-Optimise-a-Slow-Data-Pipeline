@@ -9,3 +9,5 @@ benchmark-artifacts/events.csv
 benchmark-artifacts/catalogue.json
 benchmark-artifacts/baseline.csv
 benchmark-artifacts/fast.csv
+
+report.csv
