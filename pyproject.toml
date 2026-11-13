@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecommerce-event-pipeline"
+version = "0.1.0"
+description = "Streaming and vectorized e-commerce event aggregation assignment"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "pytest>=8", "hypothesis>=6"]
+
+[project.optional-dependencies]
+test = ["mypy>=1.10"]
+
+[project.scripts]
+pipeline = "pipeline.core:main"
+
+[tool.setuptools]
+packages = ["pipeline"]
+py-modules = ["pipeline_slow", "generate_data"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["pipeline", "pipeline_slow.py", "generate_data.py", "bench.py"]

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+events.csv
+catalogue.json
+benchmark-artifacts/events.csv
+benchmark-artifacts/catalogue.json
+benchmark-artifacts/baseline.csv
+benchmark-artifacts/fast.csv
